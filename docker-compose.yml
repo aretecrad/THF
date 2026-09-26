@@ -1,0 +1,30 @@
+# One command to run both apps: docker compose up --build
+# Put the backend settings in backend/.env (see backend/.env.example). Only the frontend is published;
+# the backend is reachable only through it, which is why it can trust X-Forwarded-For from any proxy.
+services:
+  backend:
+    build: ./backend
+    env_file: backend/.env
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      TRUST_PROXY: "true"
+    volumes:
+      - backend-data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        BACKEND_URL: http://backend:4000
+        PRIVACY_CONTACT_EMAIL: ${PRIVACY_CONTACT_EMAIL:-}
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  backend-data:

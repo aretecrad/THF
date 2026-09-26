@@ -1,0 +1,19 @@
+.brand {
+  margin: 0;
+  font: 700 20px/1.1 var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  vertical-align: 1px;
+  border-radius: 50%;
+  background: var(--end);
+  box-shadow:
+    0 0 0 2.5px var(--ink),
+    0 0 0 6px rgba(255, 179, 0, 0.3);
+}

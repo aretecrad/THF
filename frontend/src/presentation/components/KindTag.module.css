@@ -1,0 +1,22 @@
+.tag {
+  --tone: var(--both);
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid color-mix(in srgb, var(--tone) 38%, transparent);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--tone) 12%, rgba(255, 255, 255, 0.7));
+  color: var(--tone);
+  font: 700 10.5px/1 var(--font-text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sale {
+  --tone: var(--sale);
+}
+
+.rent {
+  --tone: var(--rent);
+}

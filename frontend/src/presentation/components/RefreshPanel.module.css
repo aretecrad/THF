@@ -1,0 +1,40 @@
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 8px 8px 20px;
+}
+
+.status {
+  display: grid;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.note {
+  max-width: 42ch;
+  color: var(--ink-muted);
+  font-size: 12.5px;
+}
+
+.error {
+  color: var(--sale);
+}
+
+.progress {
+  display: block;
+  width: 220px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgba(15, 27, 45, 0.1);
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffb300, #ffd35c);
+  transition: width 0.4s ease;
+}

@@ -1,0 +1,87 @@
+.dialog {
+  width: min(420px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.dialog::backdrop {
+  background: rgba(15, 27, 45, 0.28);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.card {
+  display: grid;
+  gap: 16px;
+  padding: 26px 28px;
+  background: var(--glass-fill-strong);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.close {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.lede {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 16px;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.action {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 15px;
+}
+
+.notice,
+.problem {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.notice {
+  border: 1px solid color-mix(in srgb, var(--rent) 35%, transparent);
+  background: color-mix(in srgb, var(--rent) 10%, rgba(255, 255, 255, 0.6));
+}
+
+.problem {
+  border: 1px solid color-mix(in srgb, var(--sale) 35%, transparent);
+  background: var(--glass-alert);
+  color: #7d1812;
+}
+
+.setup,
+.fineprint {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.fineprint {
+  padding-top: 12px;
+  border-top: 1px solid var(--glass-divider);
+}
