@@ -1,0 +1,44 @@
+.page {
+  display: grid;
+  min-height: 100dvh;
+  padding: 32px 16px;
+  place-items: start center;
+}
+
+.card {
+  width: min(680px, 100%);
+  padding: 28px 32px 32px;
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--radius-xl);
+  background: var(--glass-fill-strong);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
+  font-size: 15px;
+}
+
+.card h1 {
+  margin: 8px 0 12px;
+  font: 700 28px/1.15 var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.card h2 {
+  margin: 24px 0 8px;
+  font: 600 18px/1.25 var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.card p,
+.card li {
+  color: var(--ink-muted);
+}
+
+.card li + li {
+  margin-top: 6px;
+}
+
+.back {
+  margin: 0;
+  font-size: 14px;
+}

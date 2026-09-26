@@ -1,0 +1,20 @@
+.panel {
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
+}
+
+.alert {
+  background: var(--glass-alert);
+  border-color: rgba(224, 67, 59, 0.35);
+  color: #7d1812;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .panel {
+    background: rgba(255, 255, 255, 0.92);
+  }
+}

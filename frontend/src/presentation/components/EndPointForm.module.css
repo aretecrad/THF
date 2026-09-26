@@ -1,0 +1,62 @@
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: inset 0 1px 2px rgba(15, 27, 45, 0.08);
+}
+
+.input::placeholder {
+  color: #66758a;
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--rent) 55%, white);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--rent) 28%, transparent);
+}
+
+.current {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.chosen,
+.hint {
+  margin: 0;
+}
+
+.hint {
+  color: var(--ink-muted);
+}
+
+.coordinates {
+  display: block;
+  color: var(--ink-muted);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.error {
+  margin: 8px 0 0;
+  color: var(--sale);
+  font-size: 13.5px;
+}

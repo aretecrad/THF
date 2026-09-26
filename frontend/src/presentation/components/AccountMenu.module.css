@@ -1,0 +1,72 @@
+.menu {
+  position: relative;
+}
+
+.trigger {
+  display: block;
+  list-style: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.trigger::-webkit-details-marker {
+  display: none;
+}
+
+.avatar {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  object-fit: cover;
+  border: 1px solid var(--glass-edge);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--rent) 16%, white);
+  color: var(--rent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.popover {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  gap: 8px;
+  width: 220px;
+  padding: 14px;
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+}
+
+.who {
+  display: grid;
+  gap: 2px;
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.who span {
+  color: var(--ink-muted);
+  font-size: 12.5px;
+}
+
+.item {
+  width: 100%;
+}
+
+.danger {
+  justify-self: start;
+  color: var(--sale);
+  font-size: 13.5px;
+}
+
+.privacy {
+  font-size: 13px;
+  font-weight: 500;
+}
